@@ -3,4 +3,4 @@
 
 [cxx]
   untracked_headers = warn
-  untracked_headers_whitelist = /usr/include/.*, /usr/local/Cellar/llvm/.*
+  untracked_headers_whitelist = /usr/include/.*, /usr/local/Cellar/llvm/.* /usr/lib/gcc/x86_64-linux-gnu/.*

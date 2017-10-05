@@ -15,8 +15,8 @@ cxx_library(
     ('src', '**/*.h'),
   ]),
   platform_headers = [
-    ('default', macos_headers),
     ('^macos.*', macos_headers),
+    ('.*', macos_headers),
   ],
   srcs = glob([
     'src/**/*.c',
@@ -39,8 +39,8 @@ cxx_library(
     'zmalloc.h': '3rdparty/zmalloc.h',
   },
   platform_headers = [
-    ('default', macos_headers),
     ('^macos.*', macos_headers),
+    ('.*', macos_headers),
   ],
   srcs = [
     '3rdparty/zmalloc.c',
