@@ -1,0 +1,29 @@
+cxx_binary(
+  name = 'routing',
+  srcs = [
+    'routing.c',
+  ],
+  deps = [
+    '//:r3',
+  ],
+)
+
+cxx_binary(
+  name = 'simple_cpp',
+  srcs = [
+    'simple_cpp.cpp',
+  ],
+  deps = [
+    '//:r3',
+  ],
+)
+
+cxx_binary(
+  name = 'simple',
+  srcs = [
+    'simple.c',
+  ],
+  deps = [
+    '//:r3',
+  ],
+)

@@ -1,0 +1,6 @@
+{
+  "name": "r3",
+  "dependencies": {
+    "pcre/pcre": "8.36.0"
+  }
+}
