@@ -9,7 +9,7 @@ cxx_binary(
 )
 
 cxx_binary(
-  name = 'simple_cpp',
+  name = 'simple-cpp',
   srcs = [
     'simple_cpp.cpp',
   ],

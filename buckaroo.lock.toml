@@ -1,0 +1,10 @@
+manifest = "1590a248910e189d2f8d8a6681e17fdeb88a3d22dcc73a100dedcf9167142f4e"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/pcre"
+target = "//:pcre"
+
+[[lock]]
+name = "github.com/buckaroo-pm/pcre"
+version = "branch=master"
+revision = "9da3b92b5fa9c78570a18273f855228f7fca6e46"

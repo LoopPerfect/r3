@@ -1,15 +1,13 @@
 /*
- * check_slug.c
+ * routing.c
  * Copyright (C) 2014 c9s <yoanlin93@gmail.com>
  *
  * Distributed under terms of the MIT license.
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include "../include/r3.h"
 
-
-
+#include <r3/r3.h>
 
 void test1(void) {
     R3Node *n = r3_tree_create(10);

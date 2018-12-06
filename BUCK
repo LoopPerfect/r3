@@ -1,4 +1,5 @@
-include_defs('//BUCKAROO_DEPS')
+load('//:subdir_glob.bzl', 'subdir_glob')
+load('//:buckaroo_macros.bzl', 'buckaroo_deps')
 
 macos_headers = {
   'config.h': 'src/config.h.macosx',
@@ -8,28 +9,40 @@ linux_headers = {
   'config.h': 'src/config.h.linux',
 }
 
+prebuilt_cxx_library(
+  name = 'config', 
+  header_namespace = '', 
+  header_only = True, 
+  exported_platform_headers = [
+    ('macos.*', macos_headers),
+    ('linux.*', linux_headers),
+  ], 
+  visibility = [
+    'PUBLIC', 
+  ], 
+)
+
 cxx_library(
   name = 'r3',
   header_namespace = '',
   exported_headers = subdir_glob([
     ('include', '**/*.h'),
     ('include', '**/*.hpp'),
-  ]),
+  ], prefix = 'r3'),
   headers = subdir_glob([
+    ('include', '**/*.h'),
+    ('include', '**/*.hpp'),
     ('src', '**/*.h'),
   ]),
-  platform_headers = [
-    ('^macos.*', macos_headers),
-    ('^linux.*', linux_headers),
-    ('default', linux_headers),
-  ],
   srcs = glob([
     'src/**/*.c',
-  ], excludes = [
+  ], exclude = [
     'src/gvc.c',
     'src/json.c',
   ]),
-  deps = BUCKAROO_DEPS,
+  deps = [
+    ':config', 
+  ] + buckaroo_deps(),
   visibility = [
     'PUBLIC',
   ],

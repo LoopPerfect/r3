@@ -1,0 +1,16 @@
+cxx_library(
+  name = 'zmalloc', 
+  header_namespace = '', 
+  exported_headers = [
+    'zmalloc.h', 
+  ], 
+  srcs = [
+    'zmalloc.c', 
+  ], 
+  deps = [
+    '//:config', 
+  ], 
+  visibility = [
+    'PUBLIC', 
+  ], 
+)

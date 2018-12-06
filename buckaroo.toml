@@ -1,0 +1,6 @@
+targets = [ "//:r3" ]
+
+[[dependency]]
+package = "github.com/buckaroo-pm/pcre"
+version = "branch=master"
+private = true

@@ -1,9 +1,0 @@
-{
-  "pcre/pcre": {
-    "source": {
-      "url": "https://github.com/nikhedonia/pcre-1/archive/7619846506d1698619c4c19516ea87e316e5860b.zip",
-      "sha256": "2d0127569bb9321bae42fe6295e4dd732d65e5ec5dbbc9b8979ce67d31d71cc4",
-      "subPath": "pcre-1-7619846506d1698619c4c19516ea87e316e5860b"
-    }
-  } 
-}

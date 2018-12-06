@@ -6,7 +6,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include "r3.h"
+#include <r3/r3.h>
 
 int main()
 {
