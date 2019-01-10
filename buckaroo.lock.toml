@@ -1,10 +1,17 @@
-manifest = "1590a248910e189d2f8d8a6681e17fdeb88a3d22dcc73a100dedcf9167142f4e"
+manifest = "539a080d2dd6b2db5a4d8b91abc45021d3261302c62dbe962b8afa63adb40c15"
+
+[[dependency]]
+package = "github.com/buckaroo-pm/check"
+target = "//:check"
 
 [[dependency]]
 package = "github.com/buckaroo-pm/pcre"
 target = "//:pcre"
 
-[[lock]]
-name = "github.com/buckaroo-pm/pcre"
-version = "branch=master"
+[lock."github.com/buckaroo-pm/check"]
+versions = [ "branch=master" ]
+revision = "53e84bd2ed5d98cf98cb91e781a2983d7d01425d"
+
+[lock."github.com/buckaroo-pm/pcre"]
+versions = [ "branch=master" ]
 revision = "9da3b92b5fa9c78570a18273f855228f7fca6e46"

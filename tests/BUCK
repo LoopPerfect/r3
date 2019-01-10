@@ -1,0 +1,13 @@
+load('//:buckaroo_macros.bzl', 'buckaroo_deps_from_package')
+
+cxx_binary(
+  name = 'tests',
+  header_namespace = '',
+  srcs = glob([
+    # '*.c',
+    'check_str_array.c',
+  ]),
+  deps = [
+    '//:r3',
+  ] + buckaroo_deps_from_package('github.com/buckaroo-pm/check'),
+)

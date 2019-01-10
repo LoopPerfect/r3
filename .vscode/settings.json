@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "BUCK": "python",
+    ".buckconfig.*": "ini",
+    "zmalloc.h": "c"
+  }
+}

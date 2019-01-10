@@ -3,11 +3,11 @@
 #include <check.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "r3.h"
-#include "r3_slug.h"
-#include "zmalloc.h"
+#include "r3/r3.h"
+#include "r3/r3_slug.h"
+// #include "zmalloc.h"
 #include "bench.h"
-#include "r3_debug.h"
+#include "r3/r3_debug.h"
 
 #define SAFE_FREE(ptr) if(ptr) free(ptr);
 

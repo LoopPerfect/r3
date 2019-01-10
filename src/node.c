@@ -192,17 +192,17 @@ int r3_tree_compile_patterns(R3Node * n, char **errstr) {
          //   free(slug_pat);
             info("temp pattern: %s\n",cpat);
         } else {
-            strncat(p,"^(", 2);
+            strncat(p, "^(", 2);
             p += 2;
 
             strncat(p, e->pattern.base, e->pattern.len);
             p += e->pattern.len;
 
-            strncat(p++,")", 1);
+            strncat(p++, ")", 1);
         }
 
         if ( i + 1 < n->edges.size && n->edges.size > 1 ) {
-            strncat(p++,"|",1);
+            strncat(p++, "|", 1);
         }
     }
 

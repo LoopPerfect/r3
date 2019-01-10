@@ -1,5 +1,5 @@
 load('//:subdir_glob.bzl', 'subdir_glob')
-load('//:buckaroo_macros.bzl', 'buckaroo_deps')
+load('//:buckaroo_macros.bzl', 'buckaroo_deps_from_package')
 
 macos_headers = {
   'config.h': 'src/config.h.macosx',
@@ -10,16 +10,16 @@ linux_headers = {
 }
 
 prebuilt_cxx_library(
-  name = 'config', 
-  header_namespace = '', 
-  header_only = True, 
+  name = 'config',
+  header_namespace = '',
+  header_only = True,
   exported_platform_headers = [
     ('macos.*', macos_headers),
     ('linux.*', linux_headers),
-  ], 
+  ],
   visibility = [
-    'PUBLIC', 
-  ], 
+    'PUBLIC',
+  ],
 )
 
 cxx_library(
@@ -41,8 +41,8 @@ cxx_library(
     'src/json.c',
   ]),
   deps = [
-    ':config', 
-  ] + buckaroo_deps(),
+    ':config',
+  ] + buckaroo_deps_from_package('github.com/buckaroo-pm/pcre'),
   visibility = [
     'PUBLIC',
   ],

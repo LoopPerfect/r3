@@ -6,9 +6,9 @@
 #include <check.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "r3.h"
-#include "r3_slug.h"
-#include "zmalloc.h"
+#include "r3/r3.h"
+#include "r3/r3_slug.h"
+// #include "zmalloc.h"
 
 START_TEST (test_routes)
 {

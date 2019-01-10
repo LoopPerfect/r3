@@ -8,9 +8,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <check.h>
-#include "r3.h"
-#include "r3_slug.h"
-#include "zmalloc.h"
+#include "r3/r3.h"
+#include "r3/r3_slug.h"
+// #include "zmalloc.h"
 
 START_TEST (test_str_array)
 {

@@ -8,11 +8,11 @@
 #include <stdio.h>
 #include <check.h>
 #include <stdlib.h>
-#include "r3.h"
-#include "r3_slug.h"
-#include "zmalloc.h"
-#include "slug.h"
-#include "r3_debug.h"
+#include "r3/r3.h"
+#include "r3/r3_slug.h"
+// #include "zmalloc.h"
+#include "r3/slug.h"
+#include "r3/r3_debug.h"
 
 START_TEST (test_pattern_to_opcode)
 {
@@ -215,7 +215,7 @@ Suite* r3_suite (void) {
         tcase_add_test(tcase, test_r3_slug_find_name);
         tcase_add_test(tcase, test_r3_slug_find_name_without_pattern);
         tcase_add_test(tcase, test_r3_slug_find_name_with_multiple_slug);
-        
+
         // tcase_add_test(tcase, test_slug_parse_with_pattern);
         // tcase_add_test(tcase, test_slug_parse_without_pattern);
 

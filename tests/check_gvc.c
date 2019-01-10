@@ -8,9 +8,9 @@
 #include <stdio.h>
 #include <check.h>
 #include <stdlib.h>
-#include "r3.h"
-#include "r3_gvc.h"
-#include "r3_slug.h"
+#include "r3/r3.h"
+#include "r3/r3_gvc.h"
+#include "r3/r3_slug.h"
 #include "bench.h"
 
 START_TEST (test_gvc_render_dot)
