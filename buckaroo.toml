@@ -3,6 +3,7 @@ targets = [ "//:r3" ]
 [[dependency]]
 package = "github.com/buckaroo-pm/check"
 version = "branch=master"
+private = true
 
 [[dependency]]
 package = "github.com/buckaroo-pm/pcre"
